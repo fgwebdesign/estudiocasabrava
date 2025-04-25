@@ -1,19 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import shape from '@/assets/img/home-04/about/about-shape-2.png'
-import shape_2 from '@/assets/img/home-04/about/about-shape-1.png'
 
 export default function AboutTwo() {
   return (
-    <div className="tp-about-4-area pt-100 pb-110 p-relative">
-      <div className="tp-about-4-shape-2">
-        <Image
-          className="tp-zoom-in-out"
-          src={shape}
-          alt="shape"
-        />
-      </div>
+    <div className="tp-about-4-area pt-100 pb-110">
       <div className="container">
         <div className="row">
           <div className="col-xl-10 col-md-10">
@@ -25,12 +15,7 @@ export default function AboutTwo() {
           </div>
         </div>
         <div className="row align-items-center">
-          <div className="col-xl-3 col-lg-2 col-md-3">
-            <div className="tp-about-4-shape-1">
-              <Image src={shape_2} alt="shape-2" />
-            </div>
-          </div>
-          <div className="col-xl-9 col-lg-10 col-md-9">
+          <div className="col-xl-12 col-lg-12 col-md-12">
             <div className="tp-about-4-content-wrap">
               <div className="row">
                 <div className="col-xl-6 col-lg-6">

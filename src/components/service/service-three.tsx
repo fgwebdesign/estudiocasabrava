@@ -12,7 +12,6 @@ import sv_2 from "@/assets/img/home-04/service/sv-icon-2.png";
 import sv_3 from "@/assets/img/home-04/service/sv-icon-3.png";
 import sv_4 from "@/assets/img/home-04/service/sv-icon-4.png";
 
-
 // slider setting
 const slider_setting: SwiperOptions = {
   slidesPerView: 4,
@@ -44,6 +43,7 @@ const slider_setting: SwiperOptions = {
     },
   },
 };
+
 // service data
 const service_data = [
   {
@@ -83,12 +83,16 @@ const service_data = [
     subtitle: "Coordinación y supervisión de proyectos de construcción y diseño.",
   },
 ];
+
 export default function ServiceThree() {
   return (
     <div
-      className="tp-service-4-area pt-120 pb-170 fix"
-      data-background="assets/img/home-04/brand/overly.png"
-      style={{ backgroundImage: "url(/assets/img/home-04/brand/overly.png)" }}
+      className="tp-service-4-area pt-120 pb-170 fix bg-black"
+      style={{ 
+        backgroundColor: '#000000',
+        backgroundImage: "url(/assets/img/home-04/brand/overly.png)",
+        backgroundBlendMode: 'overlay'
+      }}
     >
       <div className="container">
         <div className="tp-service-4-title-wrap">
