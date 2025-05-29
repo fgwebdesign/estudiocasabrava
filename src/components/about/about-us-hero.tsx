@@ -13,15 +13,15 @@ export default function AboutUsHero() {
   return (
     <div
       className="ab-inner-hero-area ab-inner-hero-bg p-relative"
-      style={{backgroundImage: "url(/assets/img/inner-about/hero/dor1.jpg)"}}
+      style={{backgroundImage: "url(/assets/img/home-03/about/escri1.png)"}}
     >
       <div className="breadcurmb-site d-none">
-        <h6>About Us</h6>
+        <h6>Sobre Nosotros</h6>
       </div>
       <div className="ab-inner-hero-scroll smooth">
         <a className="pointer" onClick={scrollTo}>
           <span>
-            Scroll to explore
+            Descubre más
             <ScrollDown />
           </span>
         </a>
@@ -35,12 +35,12 @@ export default function AboutUsHero() {
               data-stagger="0.08"
             >
               <span className="ab-inner-hero-subtitle">
-                Digital <br /> creative agency
+                Estudio de <br /> Diseño y Fabricación
               </span>
               <h1 className="ab-inner-hero-title tp-char-animation">
-                Building Digital Presence
+                Diseño y calidad en cada detalle
               </h1>
-              <p>Digital experiences with maximum emotional impact</p>
+              <p>Mobiliario a medida que transforma espacios.</p>
             </div>
           </div>
         </div>
@@ -52,10 +52,9 @@ export default function AboutUsHero() {
               data-stagger="0.08"
             >
               <p>
-                Liko develops, designs & delivers websites & creative campaigns
-                that drive results,
+                En Estudio Casa Brava diseñamos, fabricamos y colocamos muebles a medida y puertas para proyectos de arquitectura, combinando precio, calidad y detalle de forma única en el mercado.
               </p>
-               <a className="tp-btn-white-sm border-style" href="#">Our Story</a>
+              <a className="tp-btn-white-sm border-style" href="#">Nuestra Historia</a>
             </div>
           </div>
         </div>

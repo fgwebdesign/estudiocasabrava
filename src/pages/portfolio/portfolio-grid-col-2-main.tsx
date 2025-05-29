@@ -1,6 +1,6 @@
 "use client";
 import { gsap } from "gsap";
-import React, { useEffect } from "react";
+import React, { useEffect, CSSProperties } from "react";
 import { useGSAP } from "@gsap/react";
 import useScrollSmooth from "@/hooks/use-scroll-smooth";
 import { ScrollSmoother, ScrollTrigger, SplitText, cursorAnimation } from "@/plugins";
@@ -8,13 +8,40 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 // internal imports
 import Wrapper from "@/layouts/wrapper";
-import HeaderEleven from "@/layouts/headers/header-eleven";
+import HeaderThree from "@/layouts/headers/header-three";
 import PortfolioGridColTwoArea from "@/components/portfolio/portfolio-grid-col-2-area";
 import BigText from "@/components/big-text";
 import FooterTwo from "@/layouts/footers/footer-two";
 // animation
 import { hoverBtn } from "@/utils/hover-btn";
 import { charAnimation, fadeAnimation, titleAnimation, zoomAnimation } from "@/utils/title-animation";
+
+// styles
+const titleStyle: CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif",
+  fontSize: 'clamp(4rem, 12vw, 10rem)',
+  lineHeight: '1.2',
+  fontWeight: '400',
+  letterSpacing: '0.02em',
+  color: '#FFFFFF'
+};
+
+const subtitleStyle: CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif",
+  color: '#FFFFFF'
+};
+
+const descriptionStyle: CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif",
+  fontSize: '1.2rem',
+  color: '#FFFFFF',
+  opacity: '0.8'
+};
+
+const heroSectionStyle: CSSProperties = {
+  backgroundColor: '#000000',
+  color: '#FFFFFF'
+};
 
 const PortfolioGridColTwoMain = () => {
   useScrollSmooth();
@@ -46,35 +73,33 @@ const PortfolioGridColTwoMain = () => {
   return (
     <Wrapper>
 
-      {/* magic cursor start */}
+      {/* magic cursor start */}  
       <div id="magic-cursor">
         <div id="ball"></div>
       </div>
       {/* magic cursor end */}
       
       {/* header area start */}
-      <HeaderEleven />
+      <HeaderThree />
       {/* header area end */}
 
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <main>
             {/* portfolio hero */}
-            <div className="tm-hero-area tm-hero-ptb">
+            <div className="tm-hero-area tm-hero-ptb" style={heroSectionStyle}>
               <div className="container">
                 <div className="row">
                   <div className="col-xl-12">
                     <div className="tm-hero-content">
-                      <span className="tm-hero-subtitle">Liko Studio</span>
-                      <h4 className="tm-hero-title fs-220 tp-char-animation">
-                        Classic Grid
+                      <span className="tm-hero-subtitle" style={subtitleStyle}>ESTUDIO CASA BRAVA</span>
+                      <h4 className="tm-hero-title fs-220 tp-char-animation" style={titleStyle}>
+                        PROYECTOS
                       </h4>
                     </div>
-                    <div className="tm-hero-text tp_title_anim">
+                    <div className="tm-hero-text tp_title_anim" style={descriptionStyle}>
                       <p>
-                        We’re a diverse team that works as fancies attention to
-                        details, enjoys beers on Friday nights and aspires to
-                        design the dent in the universe.
+                        Descubre nuestros proyectos de construcción y remodelación.
                       </p>
                     </div>
                   </div>

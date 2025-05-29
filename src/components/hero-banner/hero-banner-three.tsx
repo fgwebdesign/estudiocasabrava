@@ -1,5 +1,4 @@
 import React, { CSSProperties } from "react";
-import Image from "next/image";
 
 // imgStyle
 const videoStyle: CSSProperties = { 
@@ -8,20 +7,35 @@ const videoStyle: CSSProperties = {
   objectFit: 'cover',
 };
 
+// containerStyle
+const containerStyle: CSSProperties = {
+  backgroundColor: '#000000',
+};
+
+// titleStyle
+const titleStyle: CSSProperties = {
+  fontSize: 'clamp(2.5rem, 8vw, 6rem)',
+  lineHeight: '1.2',
+  fontWeight: '400',
+  fontFamily: "'DM Sans', sans-serif",
+  letterSpacing: '0.02em'
+};
+
 export default function HeroBannerThree() {
   return (
-    <div className="tp-hero-4-area tp-btn-trigger">
+    <div className="tp-hero-4-area tp-btn-trigger" style={containerStyle}>
       <div className="container-fluid">
         <div className="row">
           <div className="col-xl-12">
             <div className="tp-hero-4-content-wrap">
               <div className="p-relative">
                 <div className="tp-hero-4-content p-relative">
-                  <h1 className="tp-section-title-200 tp-char-animation">
-                    ESTUDIO <br />
-                    CASA BRAVA
+                  <h1 className="tp-section-title-200 tp-char-animation" style={titleStyle}>
+                    TU PROYECTO,<br />
+                    NUESTRA PRECISIÓN.
                   </h1>
                 </div>
+                {/* 
                 <div className="tp-hero-4-achievement tp-btn-bounce d-none d-md-block">
                   <span>
                     <i
@@ -36,6 +50,7 @@ export default function HeroBannerThree() {
                     Proyectos completados <br /> con éxito
                   </p>
                 </div>
+                */}
               </div>
               <div className="tp-hero-4-thumb text-end">
                 <video

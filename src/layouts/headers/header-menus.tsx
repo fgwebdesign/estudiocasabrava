@@ -3,15 +3,29 @@ import Image from "next/image";
 import Link from "next/link";
 import menu_data from "@/data/menu-data";
 
-const imgStyle:CSSProperties = { width: "100%", height: "auto", objectFit: "cover" };
+const imgStyle: CSSProperties = { 
+  width: "100%", 
+  height: "auto", 
+  objectFit: "cover" 
+};
+
+const menuStyle: CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif"
+};
+
+const menuLinkStyle: CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif",
+  fontWeight: '400'
+};
+
 const HeaderMenus = () => {
   return (
-    <ul>
+    <ul style={menuStyle}>
       {menu_data.map((menu) => (
         <li key={menu.id} className="has-dropdown">
-          <Link href={menu.link}>{menu.title}</Link>
+          <Link href={menu.link} style={menuLinkStyle}>{menu.title}</Link>
           {menu.home_menus ? (
-            <div className="tp-submenu submenu tp-mega-menu">
+            <div className="tp-submenu submenu tp-mega-menu" style={menuStyle}>
               <div className="tp-menu-fullwidth">
                 <div className="tp-homemenu-wrapper">
                   <div className="row gx-25 row-cols-xl-6 row-cols-lg-2 row-cols-md-2 row-cols-1">

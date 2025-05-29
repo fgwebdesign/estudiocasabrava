@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { SwiperOptions } from "swiper/types";
 import Link from "next/link";
 import Image from "next/image";
+import { CSSProperties } from "react";
 
 // internal imports
 import star_icon from "@/assets/img/home-04/service/sv-star-1.png";
@@ -48,41 +49,85 @@ const slider_setting: SwiperOptions = {
 const service_data = [
   {
     id: 1,
-    icon: sv_1,
-    title: "Diseño Arquitectónico",
-    subtitle: "Creación de planos y diseños arquitectónicos personalizados.",
+    title: "Arquitectura",
+    subtitle: "Desarrollo integral de proyectos arquitectónicos para edificios, viviendas y espacios comerciales.",
   },
   {
     id: 2,
-    icon: sv_2,
-    title: "Diseño de Interiores",
-    subtitle: "Transformación de espacios interiores para mejorar la funcionalidad y estética.",
+    title: "Interiorismo",
+    subtitle: "Diseño de interiores personalizado para crear espacios funcionales y estéticamente atractivos.",
   },
   {
     id: 3,
-    icon: sv_3,
-    title: "Renovación y Remodelación",
-    subtitle: "Actualización de espacios existentes para adaptarse a nuevas necesidades.",
+    title: "Muebles a Medida",
+    subtitle: "Cotización, fabricación y colocación de mobiliario personalizado adaptado a cada espacio.",
   },
   {
     id: 4,
-    icon: sv_4,
-    title: "Planificación Urbana",
-    subtitle: "Desarrollo de planes para el uso eficiente del espacio urbano.",
+    title: "Puertas y Equipamiento",
+    subtitle: "Diseño e instalación de puertas y equipamiento especializado según las necesidades del proyecto.",
   },
   {
     id: 5,
-    icon: sv_2,
-    title: "Consultoría de Diseño",
-    subtitle: "Asesoramiento experto en tendencias y soluciones de diseño.",
+    title: "Gestión de Proyectos",
+    subtitle: "Acompañamiento integral desde la medición inicial hasta la instalación final con los más altos estándares.",
   },
   {
     id: 6,
-    icon: sv_4,
-    title: "Gestión de Proyectos",
-    subtitle: "Coordinación y supervisión de proyectos de construcción y diseño.",
+    title: "Espacios Comerciales",
+    subtitle: "Soluciones especializadas para oficinas y locales comerciales, optimizando cada espacio.",
   },
 ];
+
+const titleStyle: CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif",
+  color: '#FFFFFF',
+  fontSize: 'clamp(2rem, 4vw, 3rem)',
+  lineHeight: '1.2',
+  fontWeight: '400'
+};
+
+const serviceItemStyle: CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif",
+  color: '#000000',
+  backgroundColor: '#FFFFFF',
+  backgroundImage: "none",
+  padding: '40px 35px',
+  borderRadius: '12px',
+  transition: 'all 0.3s ease',
+  height: '250px',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center'
+};
+
+const serviceTitleStyle: CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif",
+  color: '#000000',
+  fontSize: '24px',
+  marginBottom: '1rem',
+  fontWeight: '600',
+  letterSpacing: '-0.02em',
+  lineHeight: '1.3'
+};
+
+const serviceTextStyle: CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif",
+  color: '#333333',
+  fontSize: '15px',
+  lineHeight: '1.5',
+  fontWeight: '400',
+  letterSpacing: '0.01em'
+};
+
+const serviceIconStyle: CSSProperties = {
+  marginBottom: '30px',
+  width: '60px',
+  height: '60px',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center'
+};
 
 export default function ServiceThree() {
   return (
@@ -99,47 +144,29 @@ export default function ServiceThree() {
           <div className="row align-items-end">
             <div className="col-xl-9 col-lg-9 col-md-9">
               <div className="tp-service-4-title-box tp_fade_bottom">
-                <h4 className="tp-service-4-title">
+                <h4 className="tp-service-4-title" style={titleStyle}>
                   Colaboramos con clientes para crear espacios arquitectónicos y de interiores innovadores que reflejan su visión y necesidades únicas.
                 </h4>
               </div>
             </div>
             <div className="col-xl-3 col-lg-3 col-md-3">
               <div className="tp-service-4-shape-1 text-start text-md-end">
-                <Image
-                  className="tp-zoom-in-out"
-                  src={star_icon}
-                  alt="star"
-                />
+                <Image className="tp-zoom-in-out" src={star_icon} alt="star" />
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="tp-service-4-wrap">
-        <Swiper
-          {...slider_setting}
-          className="swiper-container tp-service-4-slider-active"
-        >
+        <Swiper {...slider_setting} className="swiper-container tp-service-4-slider-active">
           {service_data.map((item) => (
             <SwiperSlide key={item.id}>
-              <div
-                className="tp-service-4-item"
-                style={{
-                  backgroundImage: "url(/assets/img/home-04/hero/overly.png)",
-                }}
-              >
-                <div className="tp-service-4-icon">
-                  <Image src={item.icon} alt="icon" />
-                </div>
+              <div className="tp-service-4-item" style={serviceItemStyle}>
                 <div className="tp-service-4-content">
-                  <h4 className="tp-service-4-title-sm">
-                    <Link href="/service">{item.title}</Link>
+                  <h4 className="tp-service-4-title-sm" style={serviceTitleStyle}>
+                    <Link href="/service" style={{ color: '#000000', textDecoration: 'none' }}>{item.title}</Link>
                   </h4>
-                  <p>{item.subtitle}</p>
-                  <Link className="tp-service-4-link" href="/service">
-                    Leer más
-                  </Link>
+                  <p style={serviceTextStyle}>{item.subtitle}</p>
                 </div>
               </div>
             </SwiperSlide>

@@ -10,7 +10,7 @@ const menu_data:IMenuDT[] = [
   {
     id: 2,
     title: 'Proyectos',
-    link: '/home-9',
+    link: '/portfolio-grid-col-2',
   },
   {
     id: 3,
