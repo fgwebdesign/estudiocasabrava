@@ -1,36 +1,41 @@
 "use client";
-import React from "react";
+import React, { CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
 // images
-import port_1 from "@/assets/img/home-04/portfolio/coc.jpg";
-import port_2 from "@/assets/img/home-04/portfolio/dor1.jpg";
-import port_3 from "@/assets/img/home-04/portfolio/of.jpg";
-import port_4 from "@/assets/img/home-04/portfolio/liv.jpg";
+import port_1 from "@/assets/img/home-03/about/cocina1.png";
+import port_2 from "@/assets/img/home-03/about/dormi4.png";
+import port_3 from "@/assets/img/home-03/about/escri1.png";
+import port_4 from "@/assets/img/home-03/about/living3.png";
+
+const titleStyle: CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif"
+};
 
 // portfolio data
 const portfolio_data = [
   {
     id: 1,
-    title: "Cocinas",
+    title: "COCINAS",
     img: port_1,
   },
   {
     id: 2,
-    title: "Dormitorios",
+    title: "DORMITORIOS",
     img: port_2,
   },
   {
     id: 3,
-    title: "Oficinas",
+    title: "OFICINAS",
     img: port_3,
   },
   {
     id: 4,
-    title: "Livings",
+    title: "LIVINGS",
     img: port_4,
   },
 ];
+
 export default function ProjectThree() {
   return (
     <div
@@ -47,7 +52,7 @@ export default function ProjectThree() {
                     <Image src={item.img} alt="port-thumb" style={{ height: "auto" }} /> 
                   </div>
                   <div className="tp-project-4-content z-index">
-                    <h4 className="tp-project-4-title tp_reveal_anim-2">
+                    <h4 className="tp-project-4-title tp_reveal_anim-2" style={titleStyle}>
                       {item.title}
                     </h4>
                   </div>

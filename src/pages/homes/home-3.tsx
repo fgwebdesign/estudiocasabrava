@@ -73,10 +73,6 @@ const HomeThreeMain = () => {
             <ServiceThree />
             {/* service area end */}
 
-            {/* marquee text */}
-            <LineTextTwo />
-            {/* marquee text */}
-
             {/* portfolio area */}
             <ProjectThree />
             {/* portfolio area */}

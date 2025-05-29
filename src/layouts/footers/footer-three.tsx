@@ -6,9 +6,29 @@ import Link from 'next/link';
 
 const containerStyle: CSSProperties = {
   backgroundColor: '#000000',
-  color: '#FFFFFF'
+  color: '#FFFFFF',
+  borderTop: 'none',
+  borderBottom: 'none',
+  width: '100%',
+  maxWidth: '100%',
+  padding: '0 5%'
 };
-  
+
+const mainFooterStyle: CSSProperties = {
+  backgroundColor: '#000000',
+  padding: '100px 0',
+  borderTop: 'none',
+  borderBottom: 'none',
+  width: '100%',
+  maxWidth: '100%'
+};
+
+const copyrightSectionStyle: CSSProperties = {
+  backgroundColor: '#000000',
+  padding: '30px 0',
+  borderTop: '1px solid rgba(255, 255, 255, 0.1)'
+};
+
 const topTextStyle: CSSProperties = {
   fontFamily: "'DM Sans', sans-serif",
   fontSize: '42px',
@@ -39,7 +59,7 @@ const logoStyle: CSSProperties = {
   height: 'auto',
   marginBottom: '40px'
 };
-
+  
 const titleStyle: CSSProperties = {
   fontFamily: "'DM Sans', sans-serif",
   fontSize: '18px',
@@ -75,7 +95,18 @@ const copyrightStyle: CSSProperties = {
   fontSize: '14px',
   fontWeight: '400',
   color: '#FFFFFF',
-  opacity: '0.8'
+  opacity: '0.8',
+  marginBottom: '5px'
+};
+
+const designerLinkStyle: CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif",
+  fontSize: '14px',
+  fontWeight: '400',
+  color: '#FFFFFF',
+  opacity: '0.8',
+  textDecoration: 'none',
+  transition: 'opacity 0.3s ease'
 };
 
 const socialLinkStyle: CSSProperties = {
@@ -89,37 +120,21 @@ const socialLinkStyle: CSSProperties = {
 
 export default function FooterThree() {
   return (
-    <footer>
-      <div className="tp-footer-4-area pt-100 pb-100" style={containerStyle}>
-        <div className="container-fluid">
+    <footer style={{ backgroundColor: '#000000', width: '100%', maxWidth: '100%' }}>
+      <div className="tp-footer-4-area" style={mainFooterStyle}>
+        <div style={{ width: '100%', maxWidth: '100%', marginTop: '30px' }}>
           <div className="row">
             <div className="col-xl-12">
               <LineTextThree />
             </div>
           </div>
         </div>
-        <div className="container container-1480">
-          <div className="tp-footer-4-top">
-            <div className="row align-items-center">
-              <div className="col-xl-6 col-lg-6 col-md-6">
-                <div className="tp-footer-4-top-left">
-                  <p style={topTextStyle}>¿Tienes un proyecto en mente? <br /> ¡Hablemos!</p>
-                </div>
-              </div>
-              <div className="col-xl-6 col-lg-6 col-md-6">
-                <div className="tp-footer-4-top-right text-start text-md-end">
-                  <Link href="/" style={buttonStyle}>HABLEMOS</Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-      <div className="tp-footer-2-area pb-20" style={containerStyle}>
-        <div className="container container-1480">
+      <div className="tp-footer-2-area" style={containerStyle}>
+        <div style={{ width: '100%', maxWidth: '100%', padding: '0 5%' }}>
           <div className="row">
-            <div className="col-xl-4 col-lg-4 col-md-6 mb-50">
-              <div className="tp-footer-2-widget footer-col-2-1">
+            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-50">
+              <div className="tp-footer-2-widget">
                 <div className="tp-footer-2-widget-logo mb-30">
                   <Link href="/">
                     <Image src={logo} alt="Casa Brava" style={logoStyle} />
@@ -130,8 +145,8 @@ export default function FooterThree() {
                 </div>
               </div>
             </div>
-            <div className="col-xl-4 col-lg-4 col-md-6 mb-50">
-              <div className="tp-footer-2-widget footer-col-2-2">
+            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-50">
+              <div className="tp-footer-2-widget">
                 <div className="tp-footer-2-widget-menu">
                   <h4 style={titleStyle}>NAVEGACIÓN</h4>
                   <ul>
@@ -144,8 +159,8 @@ export default function FooterThree() {
                 </div>
               </div>
             </div>
-            <div className="col-xl-4 col-lg-4 col-md-6 mb-50">
-              <div className="tp-footer-2-widget footer-col-2-3">
+            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-50">
+              <div className="tp-footer-2-widget">
                 <h4 style={titleStyle}>OFICINA</h4>
                 <div className="tp-footer-2-contact-item mb-20">
                   <span><a href="#" target="_blank" style={linkStyle}>21 DE SETIEMBRE 2719, ESQUINA WILLIMAN</a></span>
@@ -161,24 +176,28 @@ export default function FooterThree() {
           </div>
         </div>
       </div>
-      <div className="tp-copyright-2-area pt-30 pb-30" style={containerStyle}>
-        <div className="container container-1480">
+      <div className="tp-copyright-2-area" style={copyrightSectionStyle}>
+        <div style={{ width: '100%', maxWidth: '100%', padding: '0 5%' }}>
           <div className="row align-items-center">
-            <div className="col-xl-4 col-lg-5">
+            <div className="col-xl-4 col-lg-5 col-md-12">
               <div className="tp-copyright-2-left text-center text-lg-start">
-                <p style={copyrightStyle}>Todos los derechos reservados — {new Date().getFullYear()} © Casabrava</p>
+                <p style={copyrightStyle}>
+                  Todos los derechos reservados — {new Date().getFullYear()} © Estudio Casa Brava
+                </p>
+                <p style={copyrightStyle}>
+                  Designed by: <a href="https://www.fgwebdesign.dev/" target="_blank" rel="noopener noreferrer" style={designerLinkStyle}>FG WEB DESIGNS</a>
+                </p>
               </div>
             </div>
-            <div className="col-xl-8 col-lg-7">
+            <div className="col-xl-8 col-lg-7 col-md-12">
               <div className="tp-copyright-2-social text-center text-lg-end">
-                <a href="#" style={socialLinkStyle}>Linkedin</a>
-                <a href="#" style={socialLinkStyle}>Twitter</a>
-                <a href="#" style={socialLinkStyle}>Instagram</a>
+                <a href="#" style={socialLinkStyle}>LINKEDIN</a>
+                <a href="#" style={socialLinkStyle}>INSTAGRAM</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

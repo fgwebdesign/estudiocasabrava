@@ -1,22 +1,45 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import Image from "next/image";
 
 // image
 import ser_hero from "@/assets/img/inner-service/hero/hero-1.jpg";
-import ser_hero_shape from "@/assets/img/inner-service/hero/hero-shape-1.jpg";
+
+const sectionStyle: CSSProperties = {
+  backgroundColor: '#000000'
+};
+
+const titleStyle: CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif",
+  color: '#FFFFFF'
+};
+
+const textStyle: CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif",
+  color: '#FFFFFF',
+  opacity: '0.8'
+};
+
+const subtitleStyle: CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif",
+  color: '#FFFFFF',
+  fontSize: '1.5rem',
+  marginTop: '1rem',
+  opacity: '0.9'
+};
 
 export default function ServiceHero() {
   return (
-    <div className="sv-hero-area sv-hero-ptb">
+    <div className="sv-hero-area sv-hero-ptb" style={sectionStyle}>
       <div className="container container-1530">
         <div className="row">
           <div className="col-xl-10">
             <div className="sv-hero-title-box">
-              <h4 className="sv-hero-title tp-char-animation">
-                Experience <br /> the best services.
+              <h4 className="sv-hero-title tp-char-animation" style={titleStyle}>
+                SERVICIOS
               </h4>
-              <p className="tp_fade_bottom">
-                Fulfilled direction use continual set him propriety continued.
+              <h5 style={subtitleStyle}>Cada milímetro cuenta.</h5>
+              <p className="tp_fade_bottom" style={textStyle}>
+                En Estudio Casa Brava ofrecemos un servicio integral para proyectos de arquitectura, interiorismo y equipamiento.
               </p>
             </div>
           </div>
@@ -32,12 +55,6 @@ export default function ServiceHero() {
                   style={{height:"auto"}}
                 />
               </div>
-              <Image
-                className="sv-hero-thumb-shape d-none d-lg-block"
-                src={ser_hero_shape}
-                alt="ser_hero-shape"
-                style={{height:"auto"}}
-              />
             </div>
           </div>
         </div>

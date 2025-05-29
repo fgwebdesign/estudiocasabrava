@@ -1,6 +1,5 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
-import { StarSquare } from "../svg";
 
 // marquee text
 const marquee_text = [
@@ -10,6 +9,14 @@ const marquee_text = [
   "Contactanos",
 ];
 
+// text style
+const textStyle: React.CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif",
+  fontSize: '68px',
+  fontWeight: '500',
+  letterSpacing: '0.02em',
+  textTransform: 'uppercase'
+};
 
 // prop type 
 type IProps = {
@@ -24,11 +31,8 @@ export default function LineTextThree({cls="",data_2=false}:IProps) {
       <div className="tp-line-text-slide">
         <Marquee speed={100} autoFill={true}>
           {textArray.map((text, index) => (
-            <div key={index} className="tp-line-content">
-              <h4 className="tp-footer-4-big-title">
-                <span className="d-none d-md-inline-block mr-40">
-                  <StarSquare />
-                </span>
+            <div key={index} className="tp-line-content mr-40">
+              <h4 className="tp-footer-4-big-title" style={textStyle}>
                 {text}
               </h4>
             </div>
