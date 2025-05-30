@@ -9,13 +9,12 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 // internal imports
 import Wrapper from "@/layouts/wrapper";
 import HeaderThree from "@/layouts/headers/header-three";
-import FooterTwo from "@/layouts/footers/footer-two";
+import FooterThree from "@/layouts/footers/footer-three";
 import AboutUsHero from "@/components/about/about-us-hero";
 import AboutUsArea from "@/components/about/about-us-area";
 import TeamOne from "@/components/team/team-one";
-import FunFactOne from "@/components/fun-fact/fun-fact-one";
+// import FunFactOne from "@/components/fun-fact/fun-fact-one";
 import BrandFive from "@/components/brand/brand-five";
-import AwardOne from "@/components/award/award-one";
 // animation
 import { charAnimation, fadeAnimation, titleAnimation } from "@/utils/title-animation";
 import { hoverBtn } from "@/utils/hover-btn";
@@ -55,22 +54,15 @@ const AboutUsMain = () => {
             {/* team area */}
             <TeamOne spacing="" />
             {/* team area */}
-
-            {/* fun fact area */}
-            <FunFactOne />
-            {/* fun fact area */}
-
-            {/* brand area */}
             <BrandFive />
-            {/* brand area */}
+            {/* fun fact area COMENTADO POR AHORA */ }
+            {/* <FunFactOne /> */}
+            {/* fun fact area */}
 
-            {/* award area */}
-            <AwardOne cls="ab-award-style pt-120 pb-120" abStyle={true} />
-            {/* award area */}
           </main>
 
           {/* footer area */}
-          <FooterTwo topCls="" />
+          <FooterThree />
           {/* footer area */}
         </div>
       </div>

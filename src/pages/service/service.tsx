@@ -16,7 +16,7 @@ import { BrandItems } from "@/components/brand/brand-two";
 import LineImgSlider from "@/components/line-text/line-img-slider";
 import BigText from "@/components/big-text";
 import { Leaf } from "@/components/svg";
-import FooterTwo from "@/layouts/footers/footer-two";
+import FooterThree from "@/layouts/footers/footer-three";
 // animation
 import { charAnimation, fadeAnimation } from "@/utils/title-animation";
 import { servicePanel } from "@/utils/panel-animation";
@@ -136,7 +136,7 @@ const ServiceMain = () => {
           </main>
 
           {/* footer area */}
-          <FooterTwo topCls="" />
+          <FooterThree />
           {/* footer area */}
         </div>
       </div>

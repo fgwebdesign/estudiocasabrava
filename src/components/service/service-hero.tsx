@@ -2,7 +2,7 @@ import React, { CSSProperties } from "react";
 import Image from "next/image";
 
 // image
-import ser_hero from "@/assets/img/inner-service/hero/hero-1.jpg";
+import ser_hero from "@/assets/img/home-03/about/balcon.png";
 
 const sectionStyle: CSSProperties = {
   backgroundColor: '#000000'

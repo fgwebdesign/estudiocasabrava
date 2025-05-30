@@ -11,7 +11,7 @@ import Wrapper from "@/layouts/wrapper";
 import HeaderThree from "@/layouts/headers/header-three";
 import PortfolioGridColTwoArea from "@/components/portfolio/portfolio-grid-col-2-area";
 import BigText from "@/components/big-text";
-import FooterTwo from "@/layouts/footers/footer-two";
+import FooterThree from "@/layouts/footers/footer-three";
 // animation
 import { hoverBtn } from "@/utils/hover-btn";
 import { charAnimation, fadeAnimation, titleAnimation, zoomAnimation } from "@/utils/title-animation";
@@ -118,7 +118,7 @@ const PortfolioGridColTwoMain = () => {
           </main>
 
           {/* footer area */}
-          <FooterTwo topCls="" />
+          <FooterThree />
           {/* footer area */}
         </div>
       </div>

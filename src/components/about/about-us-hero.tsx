@@ -1,6 +1,28 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import { scroller } from "react-scroll";
 import { ScrollDown } from "../svg";
+
+const titleStyle: CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif",
+  color: '#FFFFFF'
+};
+
+const subtitleStyle: CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif",
+  color: '#FFFFFF',
+  opacity: '0.9'
+};
+
+const textStyle: CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif",
+  color: '#FFFFFF',
+  opacity: '0.8',
+  fontSize: 'clamp(1rem, 1.5vw, 1.2rem)'
+};
+
+const linkStyle: CSSProperties = {
+  fontFamily: "'DM Sans', sans-serif"
+};
 
 export default function AboutUsHero() {
   const scrollTo = () => {
@@ -16,10 +38,10 @@ export default function AboutUsHero() {
       style={{backgroundImage: "url(/assets/img/home-03/about/escri1.png)"}}
     >
       <div className="breadcurmb-site d-none">
-        <h6>Sobre Nosotros</h6>
+        <h6 style={textStyle}>Sobre Nosotros</h6>
       </div>
       <div className="ab-inner-hero-scroll smooth">
-        <a className="pointer" onClick={scrollTo}>
+        <a className="pointer" onClick={scrollTo} style={textStyle}>
           <span>
             Descubre más
             <ScrollDown />
@@ -34,13 +56,13 @@ export default function AboutUsHero() {
               data-lag="0.2"
               data-stagger="0.08"
             >
-              <span className="ab-inner-hero-subtitle">
+              <span className="ab-inner-hero-subtitle" style={subtitleStyle}>
                 Estudio de <br /> Diseño y Fabricación
               </span>
-              <h1 className="ab-inner-hero-title tp-char-animation">
-                Diseño y calidad en cada detalle
+              <h1 className="ab-inner-hero-title tp-char-animation" style={titleStyle}>
+                DISEÑO Y CALIDAD EN CADA DETALLE.
               </h1>
-              <p>Mobiliario a medida que transforma espacios.</p>
+              <p style={textStyle}>Mobiliario a medida que transforma espacios.</p>
             </div>
           </div>
         </div>
@@ -51,10 +73,12 @@ export default function AboutUsHero() {
               data-lag="0.2"
               data-stagger="0.08"
             >
-              <p>
+              <p style={textStyle}>
                 En Estudio Casa Brava diseñamos, fabricamos y colocamos muebles a medida y puertas para proyectos de arquitectura, combinando precio, calidad y detalle de forma única en el mercado.
               </p>
-              <a className="tp-btn-white-sm border-style" href="#">Nuestra Historia</a>
+              <a className="tp-btn-white-sm border-style" href="#" style={linkStyle}>
+                Nuestra Historia
+              </a>
             </div>
           </div>
         </div>
