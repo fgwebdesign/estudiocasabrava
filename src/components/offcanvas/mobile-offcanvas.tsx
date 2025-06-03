@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Behance, CloseTwo, Dribble, InstagramTwo, Youtube } from "../svg";
 
 // images
-import logo from "@/assets/img/logo/logo.png";
+import logo from '@/assets/img/logo/logoestudioblanco.svg';
 import gallery_1 from "@/assets/img/menu/offcanvas/offcanvas-1.jpg";
 import gallery_2 from "@/assets/img/menu/offcanvas/offcanvas-2.jpg";
 import gallery_3 from "@/assets/img/menu/offcanvas/offcanvas-3.jpg";
@@ -21,7 +21,14 @@ type IProps = {
 export default function MobileOffcanvas({openOffcanvas,setOpenOffcanvas}: IProps) {
   return (
     <>
-      <div className={`tp-offcanvas-area ${openOffcanvas ? "opened" : ""}`}>
+      <div 
+        className={`tp-offcanvas-area ${openOffcanvas ? "opened" : ""}`}
+        style={{ 
+          backdropFilter: 'none',
+          background: '#000000',
+          boxShadow: 'none'
+        }}
+      >
         <div className="tp-offcanvas-wrapper">
           <div className="tp-offcanvas-top d-flex align-items-center justify-content-between">
             <div className="tp-offcanvas-logo">
@@ -33,6 +40,7 @@ export default function MobileOffcanvas({openOffcanvas,setOpenOffcanvas}: IProps
               <button
                 className="tp-offcanvas-close-btn"
                 onClick={() => setOpenOffcanvas(false)}
+                style={{ color: '#ffffff' }}
               >
                 <CloseTwo />
               </button>
@@ -40,10 +48,10 @@ export default function MobileOffcanvas({openOffcanvas,setOpenOffcanvas}: IProps
           </div>
           <div className="tp-offcanvas-main">
             <div className="tp-offcanvas-content">
-              <h3 className="tp-offcanvas-title">Hello There!</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+              <h3 className="tp-offcanvas-title" style={{ color: '#ffffff' }}>Bienvenido a Estudio Casa Brava</h3>
+              <p style={{ color: '#ffffff' }}>TU PROYECTO, NUESTRA PRECISIÓN. </p>
             </div>
-            <div className="tp-main-menu-mobile d-xl-none">
+            <div className="tp-main-menu-mobile d-xl-none" style={{ color: '#ffffff' }}>
               <MobileMenus/>
             </div>
             <div className="tp-offcanvas-gallery">
@@ -60,34 +68,33 @@ export default function MobileOffcanvas({openOffcanvas,setOpenOffcanvas}: IProps
               </div>
             </div>
             <div className="tp-offcanvas-contact">
-              <h3 className="tp-offcanvas-title sm">Information</h3>
-
+              <h3 className="tp-offcanvas-title sm" style={{ color: '#ffffff' }}>INFO</h3>
               <ul>
                 <li>
-                  <a href="tel:1245654">+ 4 20 7700 1007</a>
+                  <a href="tel:1245654" style={{ color: '#ffffff' }}>+ 598 97 989 211</a>
                 </li>
                 <li>
-                  <a href="mailto:hello@diego.com">hello@diego.com</a>
+                  <a href="mailto:hello@diego.com" style={{ color: '#ffffff' }}>hello@diego.com</a>
                 </li>
                 <li>
-                  <a href="#">Avenue de Roma 158b, Lisboa</a>
+                  <a href="#" style={{ color: '#ffffff' }}>21 DE SETIEMBRE 2719, ESQUINA WILLIMAN</a>
                 </li>
               </ul>
             </div>
             <div className="tp-offcanvas-social">
-              <h3 className="tp-offcanvas-title sm">Follow Us</h3>
+              <h3 className="tp-offcanvas-title sm" style={{ color: '#ffffff' }}>Follow Us</h3>
               <ul>
                 <li>
-                  <a href="#"><InstagramTwo /></a>
+                  <a href="#" style={{ color: '#ffffff' }}><InstagramTwo /></a>
                 </li>
                 <li>
-                  <a href="#"><Dribble /></a>
+                  <a href="#" style={{ color: '#ffffff' }}><Dribble /></a>
                 </li>
                 <li>
-                  <a href="#"> <Behance /></a>
+                  <a href="#" style={{ color: '#ffffff' }}><Behance /></a>
                 </li>
                 <li>
-                  <a href="#"><Youtube /></a>
+                  <a href="#" style={{ color: '#ffffff' }}><Youtube /></a>
                 </li>
               </ul>
             </div>

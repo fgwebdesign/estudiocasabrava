@@ -3,16 +3,14 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import HeaderMenus from "./header-menus";
-import { Cart } from "@/components/svg";
+import { MenuThree } from "@/components/svg";
 import logo_1 from '@/assets/img/logo/logocasabrava.png';
 import logo_2 from '@/assets/img/logo/logocasabrava.png';
 import useSticky from "@/hooks/use-sticky";
-import CartOffcanvas from "@/components/offcanvas/cart-offcanvas";
 import MobileOffcanvas from "@/components/offcanvas/mobile-offcanvas";
 
 export default function HeaderFour() {
   const {sticky,headerRef,headerFullWidth,adjustMenuBackground} = useSticky();
-  const [openCartMini, setOpenCartMini] = React.useState(false);
   const [openOffCanvas, setOpenOffCanvas] = React.useState(false);
   useEffect(() => {
     headerFullWidth();
@@ -41,40 +39,33 @@ export default function HeaderFour() {
                   <div className="tp-header-3-menu-box d-inline-flex align-items-center justify-content-between">
                     <div className="tp-header-3-menu header-main-menu">
                       <nav className="tp-main-menu-content">
-                        {/* header menus */}
                         <HeaderMenus />
-                        {/* header menus */}
                       </nav>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-xl-3 col-lg-6 col-md-6 col-6">
+              <div className="col-xl-3 col-lg-6 col-md-6 col-6 d-flex justify-content-end">
                 <div className="tp-header-3-right d-flex align-items-center justify-content-end">
-                  <div className="tp-header-3-social d-none d-sm-block">
-                    <a href="#">
-                      <i className="fa-brands fa-twitter"></i>
-                    </a>
-                    <a href="#">
-                      <i className="fa-brands fa-facebook"></i>
-                    </a>
-                    <a href="#">
-                      <i className="fa-brands fa-instagram"></i>
-                    </a>
+                  <div className="tp-header-6-menu-box d-xl-none">
+                    <button 
+                      className="tp-header-6-menubar"
+                      onClick={() => setOpenOffCanvas(true)}
+                    >
+                      <MenuThree />
+                    </button>
                   </div>
-                  <button onClick={() => setOpenOffCanvas(true)} className="tp-header-3-bar tp-offcanvas-open-btn d-xl-none">
-                    <i className="fa-solid fa-bars"></i>
-                  </button>
+                  <div className="tp-header-3-btn d-none d-xl-block">
+                    <Link className="tp-btn-white" href="/contact">
+                      Contactanos
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </header>
-
-      {/* cart mini */}
-      <CartOffcanvas openCartMini={openCartMini} setOpenCartMini={setOpenCartMini} />
-      {/* cart mini */}
 
       {/* off canvas */}
       <MobileOffcanvas openOffcanvas={openOffCanvas} setOpenOffcanvas={setOpenOffCanvas} />

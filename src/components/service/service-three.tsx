@@ -149,11 +149,6 @@ export default function ServiceThree() {
                 </h4>
               </div>
             </div>
-            <div className="col-xl-3 col-lg-3 col-md-3">
-              <div className="tp-service-4-shape-1 text-start text-md-end">
-                <Image className="tp-zoom-in-out" src={star_icon} alt="star" />
-              </div>
-            </div>
           </div>
         </div>
       </div>
