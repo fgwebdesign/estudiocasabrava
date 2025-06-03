@@ -71,7 +71,7 @@ export default function HeaderThree() {
                       href="/"
                       style={buttonStyle}
                     >
-                      CONTACTANOS
+                      CONTACTO
                     </Link>
                   </div>
                 </div>
