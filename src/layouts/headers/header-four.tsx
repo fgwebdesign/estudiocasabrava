@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import HeaderMenus from "./header-menus";
 import { MenuThree } from "@/components/svg";
-import logo_1 from '@/assets/img/logo/logocasabrava.png';
-import logo_2 from '@/assets/img/logo/logocasabrava.png';
+import logo_1 from '@/assets/img/logo/logoestudioblanco.svg';
+import logo_2 from '@/assets/img/logo/logoestudioblanco.svg';
 import useSticky from "@/hooks/use-sticky";
 import MobileOffcanvas from "@/components/offcanvas/mobile-offcanvas";
 
