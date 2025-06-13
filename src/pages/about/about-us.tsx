@@ -52,9 +52,9 @@ const AboutUsMain = () => {
             {/* about area */}
 
             {/* team area */}
-            <TeamOne spacing="" />
+            {/* <TeamOne spacing="" /> */}
             {/* team area */}
-            <BrandFive />
+            {/* <BrandFive /> */}
             {/* fun fact area COMENTADO POR AHORA */ }
             {/* <FunFactOne /> */}
             {/* fun fact area */}

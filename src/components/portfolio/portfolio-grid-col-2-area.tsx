@@ -93,40 +93,41 @@ const portfolio_data = [
 // styles
 const containerStyle: CSSProperties = {
   backgroundColor: '#000000',
-  color: 'white'
+  color: 'white',
+  padding: '40px 0'
 };
 
 const titleStyle: CSSProperties = {
   color: 'white',
   fontFamily: "'DM Sans', sans-serif",
-  fontSize: '34px',
+  fontSize: '20px',
   fontWeight: '500',
   letterSpacing: '-0.02em',
-  marginTop: '15px',
-  lineHeight: '1.2',
+  lineHeight: '1.3',
   textTransform: 'uppercase'
 };
 
 const metaStyle: CSSProperties = {
   color: 'white',
   fontFamily: "'DM Sans', sans-serif",
-  fontSize: '18px',
+  fontSize: '14px',
   fontWeight: '400',
   letterSpacing: '0.05em',
-  textTransform: 'uppercase',
-  marginBottom: '5px'
+  textTransform: 'uppercase'
 };
 
 const filterButtonStyle: CSSProperties = {
   color: 'white',
   fontFamily: "'DM Sans', sans-serif",
-  fontSize: '18px',
+  fontSize: '14px',
   fontWeight: '500',
   letterSpacing: '0.02em',
   background: 'none',
   border: 'none',
-  padding: '12px 25px',
-  cursor: 'pointer'
+  padding: '10px 15px',
+  cursor: 'pointer',
+  marginBottom: '10px',
+  transition: 'opacity 0.3s ease'
 };
 
 const moreProjectsStyle: CSSProperties = {
@@ -149,7 +150,7 @@ export default function PortfolioGridColTwoArea() {
       <div className="container container-1530">
         <div className="row justify-content-center">
           <div className="col-xl-8">
-            <div className="portfolio-filter masonary-menu d-flex justify-content-center mb-40">
+            <div className="portfolio-filter masonary-menu d-flex justify-content-center mb-40 flex-wrap">
               <button data-filter="*" className="active" style={filterButtonStyle}>
                 <span>TODOS</span>
               </button>
@@ -168,29 +169,59 @@ export default function PortfolioGridColTwoArea() {
             </div>
           </div>
         </div>
-        <div className="row grid" ref={isotopContainer}>
+        <div className="row grid g-5" ref={isotopContainer}>
           {portfolio_data.map((item) => (
             <div
               key={item.id}
-              className={`col-xl-6 col-lg-6 col-md-6 grid-item ${item.show}`}
+              className={`col-xl-6 col-lg-6 col-md-6 col-sm-12 grid-item ${item.show}`}
             >
-              <div className="tp-project-5-2-thumb anim-zoomin-wrap mb-30 not-hide-cursor p-relative" data-cursor="VER<br>PROYECTO">
-                <Link href="/portfolio-details-1" className="cursor-hide">
+              <div 
+                className="tp-project-5-2-thumb mb-30 p-relative" 
+                style={{
+                  marginBottom: '40px',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  borderRadius: '8px'
+                }}
+              >
+                <div>
                   <Image
-                    className="anim-zoomin"
                     src={item.img}
-                    alt="port-img"
-                    style={{ height: "auto" }}
+                    alt={item.title}
+                    style={{ 
+                      width: '100%',
+                      height: 'auto',
+                      display: 'block'
+                    }}
                   />
-                  <div className="tp-project-5-2-content tp_fade_anim">
-                    <span className="tp-project-5-2-meta" style={metaStyle}>{item.year}</span>
-                    <h4 className="tp-project-5-2-title-sm" style={titleStyle}>{item.title}</h4>
+                  <div 
+                    className="tp-project-5-2-content"
+                    style={{
+                      position: 'absolute',
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      padding: '20px',
+                      background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)',
+                      zIndex: 2
+                    }}
+                  >
+                    <span className="tp-project-5-2-meta" style={{
+                      ...metaStyle,
+                      display: 'block',
+                      marginBottom: '8px'
+                    }}>{item.year}</span>
+                    <h4 className="tp-project-5-2-title-sm" style={{
+                      ...titleStyle,
+                      margin: 0
+                    }}>{item.title}</h4>
                   </div>
-                </Link>
+                </div>
               </div>
             </div>
           ))}
         </div>
+        {/* Comentado temporalmente - Botón "Más Proyectos"
         <div className="row">
           <div className="col-xl-12">
             <div className="tp-projct-5-2-btn-box mt-50 d-flex justify-content-center">
@@ -212,6 +243,7 @@ export default function PortfolioGridColTwoArea() {
             </div>
           </div>
         </div>
+        */}
       </div>
     </div>
   );

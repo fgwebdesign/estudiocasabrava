@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import ErrorMain from '@/pages/error/error-main'
  
 export const metadata: Metadata = {
-  title: "Liko - Not Found Page",
+  title: "Estudio Casa Brava - Página no encontrada",
 };
 
 export default function NotFound() {

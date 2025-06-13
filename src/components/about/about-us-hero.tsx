@@ -4,7 +4,10 @@ import { ScrollDown } from "../svg";
 
 const titleStyle: CSSProperties = {
   fontFamily: "'DM Sans', sans-serif",
-  color: '#FFFFFF'
+  color: '#FFFFFF',
+  fontSize: 'clamp(2rem, 4vw, 3.5rem)',
+  lineHeight: '1.2',
+  letterSpacing: '0.02em'
 };
 
 const subtitleStyle: CSSProperties = {

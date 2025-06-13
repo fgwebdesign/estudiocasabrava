@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import logo from '@/assets/img/logo/logoestudioblanco.svg';
-import logo_2 from '@/assets/img/logo/logoestudioblanco.svg';
+import logo from '@/assets/img/logo/estudiocb.svg';
+import logo_2 from '@/assets/img/logo/estudiocb.svg';
 import { MenuTwo, UpArrowTwo } from "@/components/svg";
 import MobileOffcanvasTwo from "@/components/offcanvas/mobile-offcanvas-2";
 

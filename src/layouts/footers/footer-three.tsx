@@ -1,7 +1,7 @@
 import React, { CSSProperties } from 'react';
 import Image from 'next/image';
 import LineTextThree from '@/components/line-text/line-text-3';
-import logo from '@/assets/img/logo/logoestudioblanco.svg';
+import logo from '@/assets/img/logo/estudiocb.svg';
 import Link from 'next/link';
 
 const containerStyle: CSSProperties = {
@@ -131,7 +131,7 @@ export default function FooterThree() {
         </div>
       </div>
       <div className="tp-footer-2-area" style={containerStyle}>
-        <div style={{ width: '100%', maxWidth: '100%', padding: '0 5%' }}>
+        <div style={{ width: '100%', maxWidth: '100%' }}>
           <div className="row">
             <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-50">
               <div className="tp-footer-2-widget">
@@ -139,9 +139,6 @@ export default function FooterThree() {
                   <Link href="/">
                     <Image src={logo} alt="Casa Brava" style={logoStyle} />
                   </Link>
-                </div>
-                <div className="tp-footer-2-widget-text">
-                  <p style={descriptionStyle}>ESTAMOS UBICADOS EN MONTEVIDEO, URUGUAY <br /> Y NOS DEDICAMOS AL DISEÑO DE INTERIORES.</p>
                 </div>
               </div>
             </div>
@@ -166,10 +163,10 @@ export default function FooterThree() {
                   <span><a href="#" target="_blank" style={linkStyle}>21 DE SETIEMBRE 2719, ESQUINA WILLIMAN</a></span>
                 </div>
                 <div className="tp-footer-2-contact-item mb-20">
-                  <span><a href="tel:+59899123456" style={linkStyle}>TELÉFONO: + 598 97 989 211</a></span>
+                  <span><a href="tel:+59897666077" style={linkStyle}>TELÉFONO: +598 97 666 077</a></span>
                 </div>
                 <div className="tp-footer-2-contact-item">
-                  <span><a href="mailto:contact@casabrava.com" style={linkStyle}>EMAIL: CONTACT@CASABRAVA.COM</a></span>
+                  <span><a href="mailto:jiparodi@estudiocasabrava.com" style={linkStyle}>EMAIL: jiparodi@estudiocasabrava.com</a></span>
                 </div>
               </div>
             </div>

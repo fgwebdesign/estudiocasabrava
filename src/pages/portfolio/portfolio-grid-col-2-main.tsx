@@ -19,11 +19,12 @@ import { charAnimation, fadeAnimation, titleAnimation, zoomAnimation } from "@/u
 // styles
 const titleStyle: CSSProperties = {
   fontFamily: "'DM Sans', sans-serif",
-  fontSize: 'clamp(4rem, 12vw, 10rem)',
-  lineHeight: '1.2',
+  fontSize: 'clamp(2.5rem, 8vw, 10rem)',
+  lineHeight: '1.1',
   fontWeight: '400',
   letterSpacing: '0.02em',
-  color: '#FFFFFF'
+  color: '#FFFFFF',
+  wordBreak: 'break-word'
 };
 
 const subtitleStyle: CSSProperties = {

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Behance, CloseTwo, Dribble, InstagramTwo, Youtube } from "../svg";
 
 // images
-import logo from '@/assets/img/logo/logoestudioblanco.svg';
+import logo from '@/assets/img/logo/estudiocb.svg';
 import gallery_1 from "@/assets/img/menu/offcanvas/offcanvas-1.jpg";
 import gallery_2 from "@/assets/img/menu/offcanvas/offcanvas-2.jpg";
 import gallery_3 from "@/assets/img/menu/offcanvas/offcanvas-3.jpg";
@@ -48,12 +48,19 @@ export default function MobileOffcanvas({openOffcanvas,setOpenOffcanvas}: IProps
           </div>
           <div className="tp-offcanvas-main">
             <div className="tp-offcanvas-content">
-              <h3 className="tp-offcanvas-title" style={{ color: '#ffffff' }}>Bienvenido a Estudio Casa Brava</h3>
+              <h3 className="tp-offcanvas-title" style={{ color: '#ffffff' }}>BIENVENIDO A ESTUDIO CASA BRAVA</h3>
               <p style={{ color: '#ffffff' }}>TU PROYECTO, NUESTRA PRECISIÓN. </p>
             </div>
             <div className="tp-main-menu-mobile d-xl-none" style={{ color: '#ffffff' }}>
               <MobileMenus/>
             </div>
+            {/* 
+            ======================================
+            COMPONENTE TEMPORALMENTE DESACTIVADO
+            Galería de imágenes en el menú móvil
+            Lista para ser utilizada cuando se necesite
+            ======================================
+
             <div className="tp-offcanvas-gallery">
               <div className="row gx-2">
                 {gallery_images.map((item, i) => (
@@ -67,20 +74,28 @@ export default function MobileOffcanvas({openOffcanvas,setOpenOffcanvas}: IProps
                 ))}
               </div>
             </div>
+            */}
             <div className="tp-offcanvas-contact">
               <h3 className="tp-offcanvas-title sm" style={{ color: '#ffffff' }}>INFO</h3>
               <ul>
                 <li>
-                  <a href="tel:1245654" style={{ color: '#ffffff' }}>+ 598 97 989 211</a>
+                  <a href="tel:+59897666077" style={{ color: '#ffffff' }}>+598 97 666 077</a>
                 </li>
                 <li>
-                  <a href="mailto:hello@diego.com" style={{ color: '#ffffff' }}>hello@diego.com</a>
+                  <a href="mailto:jiparodi@estudiocasabrava.com" style={{ color: '#ffffff' }}>jiparodi@estudiocasabrava.com</a>
                 </li>
                 <li>
                   <a href="#" style={{ color: '#ffffff' }}>21 DE SETIEMBRE 2719, ESQUINA WILLIMAN</a>
                 </li>
               </ul>
             </div>
+            {/* 
+            ======================================
+            COMPONENTE TEMPORALMENTE DESACTIVADO
+            Sección de Follow Us / Redes Sociales
+            Lista para ser utilizada cuando se necesite
+            ======================================
+
             <div className="tp-offcanvas-social">
               <h3 className="tp-offcanvas-title sm" style={{ color: '#ffffff' }}>Follow Us</h3>
               <ul>
@@ -98,6 +113,7 @@ export default function MobileOffcanvas({openOffcanvas,setOpenOffcanvas}: IProps
                 </li>
               </ul>
             </div>
+            */}
           </div>
         </div>
       </div>

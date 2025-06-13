@@ -5,7 +5,7 @@ import Link from "next/link";
 import HeaderMenus from "./header-menus";
 import { Cart, MenuThree } from "@/components/svg";
 import useSticky from "@/hooks/use-sticky";
-import logo from '@/assets/img/logo/logoestudioblanco.svg';
+import logo from '@/assets/img/logo/estudiocb.svg';
 import CartOffcanvas from "@/components/offcanvas/cart-offcanvas";
 import MobileOffcanvas from "@/components/offcanvas/mobile-offcanvas";
 
@@ -38,10 +38,10 @@ export default function HeaderThree() {
                       src={logo} 
                       alt="logo" 
                       width={300} 
-                      height={75} 
+                      height={90} 
                       style={{
                         width: 'auto',
-                        height: '75px',
+                        height: '90px',
                         maxWidth: '100%'
                       }}
                     />

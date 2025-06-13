@@ -104,19 +104,22 @@ const ServiceMain = () => {
                     </p>
                   </div>
                 </div>
-
-                <div className="tp-service-5-wrap">
-                  <ServiceItems />
-                </div>
               </div>
             </div>
             {/* service area */}
 
-            {/* service area */}
-            <ServiceSix />
-            {/* service area */}
+            {/* 
+            ======================================
+            COMPONENTES TEMPORALMENTE DESACTIVADOS
+            Estos componentes están listos para ser utilizados 
+            cuando se necesiten en el futuro.
+            ======================================
 
-            {/* brand area */}
+            service area 
+            <ServiceSix />
+            service area 
+
+            brand area 
             <div className="tp-brand-4-area pt-120 pb-120">
               <div className="container">
                 <div className="row gx-0">
@@ -124,11 +127,20 @@ const ServiceMain = () => {
                 </div>
               </div>
             </div>
-            {/* brand area */}
+            brand area 
+            */}
 
-            {/* line image slider  */}
+            {/* 
+            ======================================
+            COMPONENTE TEMPORALMENTE DESACTIVADO
+            LineImgSlider está listo para ser utilizado
+            cuando se necesite en el futuro.
+            ======================================
+
+            line image slider
             <LineImgSlider />
-            {/* line image slider  */}
+            line image slider
+            */}
 
             {/* big text */}
             <BigText />
